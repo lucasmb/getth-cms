@@ -3,6 +3,9 @@
 !.docker/caddy/config/.gitkeep
 !.docker/caddy/data/.gitkeep
 
+#db
+*.db
+
 node_modules
 tmp
 bin

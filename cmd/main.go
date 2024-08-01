@@ -15,7 +15,7 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 )
 
-const DB_NAME string = "./db/echo.db"
+const DB_NAME string = "./echo.db"
 
 func main() {
 
