@@ -1,0 +1,28 @@
+package userview
+
+import (
+	"strconv"
+	"github.com/lucasmb/getth-cms/models"
+	"github.com/lucasmb/getth-cms/view/layout"
+)
+
+templ Show(user models.User) {
+	@layout.Base() {
+		<!-- Posts Section -->
+		<section class="w-full md:w-2/3 flex flex-col items-center px-3">
+			// <h3>User Name:{ user.first_name + user.last_name } </h3>
+			<h3>User Email:{ user.Email } </h3>
+			<article class="flex flex-col shadow my-4">
+				<div class="bg-white flex flex-col justify-start p-6">
+					<a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">User</a>
+					<p>
+						User Name:{ user.FirstName + user.LastName }
+						User ID:{ strconv.Itoa(user.Id) }
+					</p>
+					<a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">User ID:{ strconv.Itoa(user.Id) } </a>
+					<a href="#" class="uppercase text-gray-800 hover:text-black">Continue Reading <i class="fas fa-arrow-right"></i></a>
+				</div>
+			</article>
+		</section>
+	}
+}

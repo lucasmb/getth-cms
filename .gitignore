@@ -1,0 +1,12 @@
+.docker/caddy/
+!.docker/caddy/Caddyfile
+!.docker/caddy/config/.gitkeep
+!.docker/caddy/data/.gitkeep
+
+node_modules
+tmp
+bin
+
+.env
+
+view/**/*_templ.go*

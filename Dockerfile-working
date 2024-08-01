@@ -1,0 +1,51 @@
+# FROM golang:1.21.6-alpine3.19 as builder
+
+# RUN apk update && apk add git make bash
+
+# WORKDIR /app
+
+# COPY . ./
+
+# # Do dep installs outside, due to private git modules
+# # RUN make dep
+
+# RUN make build
+
+# FROM alpine:latest
+
+# WORKDIR /app
+
+# COPY --from=builder /app/main /app/
+# COPY --from=builder /app/public /app/public
+# COPY --from=builder /app/dist /app/dist
+# COPY --from=builder /app/pub /app/pub
+
+# EXPOSE 4001
+
+# CMD [ "/app/main" ]
+
+#FROM golang:1.22-alpine3.19
+FROM node:lts-alpine3.19
+ENV GOOS=linux GOARCH=amd64 GOLANG_VERSION=1.22.0
+ENV GOPATH /go
+ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
+
+RUN apk update && apk add --no-cache gcc && apk add --no-cache libc-dev \
+&& wget https://go.dev/dl/go$GOLANG_VERSION.linux-amd64.tar.gz \
+&& rm -rf /usr/local/go && mkdir /usr/local/go \
+&& tar -C /usr/local -xzf go$GOLANG_VERSION.linux-amd64.tar.gz \
+&& mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH" && chmod -R 1777 /usr/local/go
+
+
+#ENV PATH="${PATH}:/usr/local/go/bin"
+ 
+WORKDIR /app
+
+#COPY go.mod ./
+COPY . .
+
+RUN go install github.com/air-verse/air@latest \
+&& go install github.com/a-h/templ/cmd/templ@$(go list -m -f '{{ .Version }}' github.com/a-h/templ) \
+&& go mod download && npm install
+
+CMD ["air", "-c", ".air.toml"]

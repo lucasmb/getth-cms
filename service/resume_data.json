@@ -1,0 +1,92 @@
+{
+    "personal_information": {
+        "full_name": "Lucas Borio",
+        "country": "Argentina",
+        "city": "Berisso",
+        "state": "Buenos Aires",
+        "zip_code": "1923",
+        "phone_number": "+54 92215580121",
+        "email_address": "lucasborio@gmail.com",
+        "linkedin_profile": "https://www.linkedin.com/in/lucasborio"
+    },
+    "objective": "Dynamic and highly skilled Software Engineer with a strong proficiency in JavaScript, Vue.js, Linux, Docker, Golang, and Python. With a proven track record of delivering robust and scalable software solutions, I am seeking a challenging role where I can leverage my expertise to drive innovation and contribute to the success of impactful projects.",
+    "education": {
+        "degree": "Bachelor of Science in Computer Science",
+        "university": "University Name",
+        "location": "Location",
+        "graduation_year": "Year of Graduation"
+    },
+    "skills": {
+        "front_end": [
+            "JavaScript",
+            "Vue.js",
+            "Tailwind",
+            "CSS",
+            "HTML"
+        ],
+        "back_end": [
+            "Golang",
+            "Python",
+            "PHP"
+        ],
+        "linux": true,
+        "docker": true,
+        "databases": [
+            "MySQL",
+            "PostgreSQL",
+            "MongoDB"
+        ],
+        "version_control": "Git",
+        "ci_cd": true,
+        "problem_solving": true,
+        "communication": true
+    },
+    "experience": {
+        "job_title": "Software Engineer",
+        "company": "Company Name",
+        "location": "Location",
+        "dates_of_employment": "Dates of Employment",
+        "responsibilities": [
+            "Designed and developed responsive front-end components for web applications using JavaScript, Vue.js, HTML, and CSS, ensuring a seamless user experience across different platforms.",
+            "Implemented RESTful APIs and microservices architectures using Golang and Python, facilitating efficient communication between front-end interfaces and back-end services.",
+            "Utilized Docker for containerization of applications, optimizing deployment processes, and ensuring consistency in development and production environments.",
+            "Collaborated with DevOps team to implement CI/CD pipelines and automate build, test, and deployment processes, improving development efficiency and time-to-market.",
+            "Conducted code reviews, mentored junior developers, and provided technical guidance to ensure code quality, maintainability, and adherence to best practices.",
+            "Participated in Agile ceremonies including sprint planning, daily stand-ups, and retrospective meetings, contributing to the continuous improvement of team processes and performance.",
+            "Contributed to the optimization of application performance through code refactoring, performance tuning, and scalability improvements.",
+            "Worked closely with stakeholders to gather requirements, define project scope, and deliver high-quality software solutions that meet business objectives."
+        ]
+    },
+    "projects": [
+        {
+            "name": "Project Name",
+            "description": "Developed a scalable microservices architecture using Golang and Docker, enabling seamless deployment and horizontal scaling of services.",
+            "technologies_used": [
+                "Golang",
+                "Docker",
+                "Kubernetes",
+                "Linux",
+                "MongoDB"
+            ]
+        },
+        {
+            "name": "Project Name",
+            "description": "Built a real-time web application using Vue.js and WebSocket for live data visualization and monitoring.",
+            "technologies_used": [
+                "Vue.js",
+                "JavaScript",
+                "HTML",
+                "CSS",
+                "WebSocket"
+            ]
+        }
+    ],
+    "certifications": [
+        {
+            "name": "Certification Name",
+            "issuing_organization": "Issuing Organization",
+            "year": "Year"
+        }
+    ],
+    "references": "Available upon request"
+}

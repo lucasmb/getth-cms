@@ -1,0 +1,16 @@
+package blog
+
+import (
+	"github.com/lucasmb/getth-cms/models"
+
+	"github.com/lucasmb/getth-cms/view/layout"
+	"github.com/lucasmb/getth-cms/view/components"
+)
+
+templ Home(posts []models.Post) {
+	@layout.Blog() {
+		<div class="overflow-x-auto">
+			@components.PostsList(posts)
+		</div>
+	}
+}

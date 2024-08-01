@@ -1,0 +1,30 @@
+package components
+
+import (
+	"fmt"
+	"github.com/lucasmb/getth-cms/models"
+)
+
+templ PostsList(posts []models.Post) {
+	<div id="posts-list mt-10">
+		<!-- row 1 -->
+		for _, post := range posts {
+			<div class="card card-side min-h-64 bg-base-100 shadow-xl my-10 py-6">
+				<figure><img src="https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album"/></figure>
+				<div class="card-body">
+					<h2 class="card-title">{ post.Title }</h2>
+					<p>{ post.Content }</p>
+					<div>{ fmt.Sprintf("%v",post.CreatedAt.String()) }</div>
+					<div class="card-actions justify-end">
+						<a role="button" class="btn btn-primary " href={ templ.URL("/blog/posts/" + post.Id) }>
+							View
+						</a>
+						<a role="button" class="btn btn-tertiary" href={ templ.URL("/blog/posts/" + post.Id) }>
+							Remove
+						</a>
+					</div>
+				</div>
+			</div>
+		}
+	</div>
+}

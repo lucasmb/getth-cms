@@ -1,0 +1,37 @@
+package components
+
+import ()
+
+templ UserForm() {
+	<form method="POST" hx-post="/dashboard/users" hx-swap="none">
+		<div>
+			<label class="form-control w-full max-w-xs">
+				<div class="label">
+					<span class="label-text">First name?</span>
+				</div>
+				<input type="text" name="first_name" placeholder="Type here" class="input input-bordered w-full max-w-xs"/>
+			</label>
+			<label class="form-control w-full max-w-xs">
+				<div class="label">
+					<span class="label-text">Last name</span>
+				</div>
+				<input type="text" name="last_name" placeholder="Type here" class="input input-bordered w-full max-w-xs"/>
+			</label>
+			<label class="form-control w-full max-w-xs">
+				<div class="label">
+					<span class="label-text">Username2</span>
+				</div>
+				<input type="text" name="username" placeholder="Type here" class="input input-bordered w-full max-w-xs"/>
+			</label>
+			<label class="form-control w-full max-w-xs">
+				<div class="label">
+					<span class="label-text">Email</span>
+				</div>
+				<input type="text" name="email" placeholder="Type here" class="input input-bordered w-full max-w-xs"/>
+			</label>
+		</div>
+		<div class="row my-3">
+			<button type="submit" class="btn">Submit </button>
+		</div>
+	</form>
+}

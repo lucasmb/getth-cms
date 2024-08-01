@@ -1,0 +1,24 @@
+package layout
+
+templ Login() {
+	<!DOCTYPE html>
+	<html lang="en" data-theme="dim">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+			<title>Getth Blog</title>
+			<meta name="author" content="name"/>
+			<meta name="description" content="dashboard login"/>
+			<meta name="keywords" content="blog"/>
+			<!--Replace with your tailwind.css once created-->
+			<link href="/assets/tailwind.css" rel="stylesheet"/>
+			<script src="https://unpkg.com/htmx.org@2.0.1" integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/" crossorigin="anonymous"></script>
+		</head>
+		<body class="min-h-dvh">
+			<div class="flex w-full flex-col">
+				{ children... }
+			</div>
+        </body>
+        </html>
+}
